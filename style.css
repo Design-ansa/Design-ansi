@@ -1,0 +1,140 @@
+/* Ansa Naheed - GitHub CV Website */
+
+:root {
+  --text: #171717;
+  --muted: #666;
+  --border: #e5e5e5;
+  --accent: #111;
+  --background: #f5f5f5;
+  --paper: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: var(--background);
+  color: var(--text);
+  line-height: 1.65;
+}
+
+.cv {
+  width: min(100% - 32px, 900px);
+  margin: 40px auto;
+  padding: 60px 70px;
+  background: var(--paper);
+  box-shadow: 0 8px 35px rgba(0, 0, 0, 0.08);
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid var(--border);
+}
+
+h1 {
+  font-size: clamp(2rem, 5vw, 3.3rem);
+  letter-spacing: 0.04em;
+  line-height: 1.1;
+  font-weight: 800;
+}
+
+.role {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 1.05rem;
+}
+
+.download {
+  display: inline-block;
+  padding: 10px 16px;
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  transition: 0.2s ease;
+}
+
+.download:hover {
+  background: var(--accent);
+  color: white;
+}
+
+section {
+  padding-top: 27px;
+}
+
+h2 {
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  font-size: 0.98rem;
+  letter-spacing: 0.04em;
+  font-weight: 800;
+}
+
+ul {
+  padding-left: 18px;
+}
+
+li {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.contact {
+  padding-bottom: 10px;
+}
+
+/* Mobile */
+@media (max-width: 650px) {
+  .cv {
+    width: 100%;
+    margin: 0;
+    padding: 35px 25px;
+    box-shadow: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .download {
+    width: 100%;
+    text-align: center;
+  }
+
+  li {
+    font-size: 0.92rem;
+  }
+}
+
+/* Print-friendly styling */
+@media print {
+  body {
+    background: white;
+  }
+
+  .cv {
+    width: 100%;
+    margin: 0;
+    padding: 25px;
+    box-shadow: none;
+  }
+
+  .download {
+    display: none;
+  }
+}
